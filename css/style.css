@@ -1,18 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
 body {
     background-color: #263238;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+a {
+    color: #64B5F6;
+    text-decoration: none;
+}
+
+.display-none {
+    display: none !important;
 }
 
 .main {
-    color: #ffffff;
+    width:100%;
     text-align: center;
+    color: #ffffff;
     font-size: 24pt;
     position: relative;
-    top: 45%;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.inner {
-
+    top: 40%;
 }
 
 .main div {
@@ -21,9 +29,13 @@ body {
     display: inline-block;
 }
 
+/*.text-container {
+    text-align: right;
+    width:64%;
+}*/
+
 .generated-container {
     text-align: left;
-    /*width:200pt;*/
 }
 
 .text {
@@ -73,4 +85,23 @@ body {
         -webkit-transform: translateY(-100%); /* Firefox bug fix */
         transform: translateY(-100%);
     }
+}
+
+.instruction {
+    cursor: pointer;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14pt;
+    font-weight: 300;
+    position: relative;
+    top: 65%;
+}
+
+.copyright {
+    color: #f0f0f0;
+    text-align: center;
+    font-size: 9pt;
+    font-weight: 300;
+    position: relative;
+    top: 82%;
 }

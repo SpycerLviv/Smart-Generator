@@ -1281,6 +1281,12 @@ document.body.onkeyup = function(e){
     }
 }
 
+document.querySelector(".instruction").onclick = function(e){
+    if(allowChanging){
+        showNext();
+    }
+}
+
 function generateNew(dict){
     return dict[Math.floor(Math.random() * (dictionary.length - 1))];
 }
@@ -1289,7 +1295,7 @@ function showNext(){
     allowChanging = false;
     nextWord.innerHTML = generateNew(dictionary);
 
-    nextWord.classList.remove("next");
+    nextWord.classList.remove("next", "display-none");
     nextWord.classList.add("current", "move-up");
     currentWord.classList.remove("current");
     currentWord.classList.add("next", "move-up");
@@ -1299,6 +1305,8 @@ function showNext(){
         currentWord.classList.remove("move-up");
         words.removeChild(currentWord);
         words.appendChild(currentWord);
+
+        currentWord.classList.add("display-none");
 
         var tmp = nextWord;
         nextWord = currentWord;
