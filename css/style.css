@@ -1,0 +1,76 @@
+body {
+    background-color: #263238;
+}
+
+.main {
+    color: #ffffff;
+    text-align: center;
+    font-size: 24pt;
+    position: relative;
+    top: 45%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.inner {
+
+}
+
+.main div {
+    height: 30pt;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.generated-container {
+    text-align: left;
+    /*width:200pt;*/
+}
+
+.text {
+    line-height: 24pt;
+}
+
+.smart-word, .generated-word {
+    font-weight: 600;
+    color: #2196F3;
+    line-height: 30pt;
+}
+
+.generated-word {
+    display: block;
+    position: relative;
+}
+
+.generated-word.current {
+    -moz-transform:translateY(0%);
+    -webkit-transform:translateY(0%);
+    transform:translateY(0%);
+}
+
+.generated-word.move-up {
+    /* Apply animation to this element */
+    -moz-animation: move-up  0.1s ease-out 1;
+    -webkit-animation: move-up  0.1s ease-out 1;
+    animation: move-up  0.1s ease-out 1;
+}
+/* Move it (define the animation) */
+@-moz-keyframes move-up {
+    0%   { -moz-transform: translateY(0%); }
+    100% { -moz-transform: translateY(-100%); }
+}
+@-webkit-keyframes move-up  {
+    0%   { -webkit-transform: translateY(0%); }
+    100% { -webkit-transform: translateY(-100%); }
+}
+@keyframes move-up  {
+    0%   {
+        -moz-transform: translateY(0%); /* Firefox bug fix */
+        -webkit-transform: translateY(0%); /* Firefox bug fix */
+        transform: translateY(0%);
+    }
+    100% {
+        -moz-transform: translateY(-100%); /* Firefox bug fix */
+        -webkit-transform: translateY(-100%); /* Firefox bug fix */
+        transform: translateY(-100%);
+    }
+}
