@@ -60,12 +60,11 @@ a {
 }
 
 .generated-word.move-up {
-    /* Apply animation to this element */
-    -moz-animation: move-up  0.1s ease-out 1;
-    -webkit-animation: move-up  0.1s ease-out 1;
-    animation: move-up  0.1s ease-out 1;
+    -moz-animation: move-up  0.2s ease-out 1;
+    -webkit-animation: move-up  0.2s ease-out 1;
+    animation: move-up  0.2s ease-out 1;
 }
-/* Move it (define the animation) */
+
 @-moz-keyframes move-up {
     0%   { -moz-transform: translateY(0%); }
     100% { -moz-transform: translateY(-100%); }
@@ -76,13 +75,13 @@ a {
 }
 @keyframes move-up  {
     0%   {
-        -moz-transform: translateY(0%); /* Firefox bug fix */
-        -webkit-transform: translateY(0%); /* Firefox bug fix */
+        -moz-transform: translateY(0%);
+        -webkit-transform: translateY(0%);
         transform: translateY(0%);
     }
     100% {
-        -moz-transform: translateY(-100%); /* Firefox bug fix */
-        -webkit-transform: translateY(-100%); /* Firefox bug fix */
+        -moz-transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
         transform: translateY(-100%);
     }
 }

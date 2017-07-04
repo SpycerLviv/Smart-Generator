@@ -1,7 +1,3 @@
-var words = document.querySelector(".generated-container");
-var currentWord = document.querySelector(".generated-word.current");
-var nextWord = document.querySelector(".generated-word.next");
-var allowChanging = true;
 var dictionary = [
     "People",
     "History",
@@ -1273,6 +1269,12 @@ var dictionary = [
     "Yesterday"
 ];
 
+var words = document.querySelector(".generated-container");
+var currentWord = document.querySelector(".generated-word.current");
+var nextWord = document.querySelector(".generated-word.next");
+var allowChanging = true;
+var delay = 200;
+
 currentWord.innerHTML = generateNew(dictionary);
 
 document.body.onkeyup = function(e){
@@ -1313,5 +1315,5 @@ function showNext(){
         currentWord = tmp;
 
         allowChanging = true;
-    }, 100);
+    }, delay - 20);
 }
